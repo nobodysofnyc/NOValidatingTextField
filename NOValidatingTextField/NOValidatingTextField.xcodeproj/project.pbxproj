@@ -21,6 +21,8 @@
 		27CFC86E190B59DD00195065 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CFC850190B59DD00195065 /* UIKit.framework */; };
 		27CFC876190B59DD00195065 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27CFC874190B59DD00195065 /* InfoPlist.strings */; };
 		27CFC878190B59DD00195065 /* NOValidatingTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CFC877190B59DD00195065 /* NOValidatingTextFieldTests.m */; };
+		27CFC883190B5A3000195065 /* NOTextValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CFC882190B5A3000195065 /* NOTextValidator.m */; };
+		27CFC887190B5B2200195065 /* NOValidatingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CFC886190B5B2200195065 /* NOValidatingTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,11 @@
 		27CFC873190B59DD00195065 /* NOValidatingTextFieldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NOValidatingTextFieldTests-Info.plist"; sourceTree = "<group>"; };
 		27CFC875190B59DD00195065 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27CFC877190B59DD00195065 /* NOValidatingTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOValidatingTextFieldTests.m; sourceTree = "<group>"; };
+		27CFC881190B5A3000195065 /* NOTextValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOTextValidator.h; sourceTree = "<group>"; };
+		27CFC882190B5A3000195065 /* NOTextValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOTextValidator.m; sourceTree = "<group>"; };
+		27CFC884190B5A4500195065 /* NOTextValidatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOTextValidatorDelegate.h; sourceTree = "<group>"; };
+		27CFC885190B5B2200195065 /* NOValidatingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOValidatingTextField.h; sourceTree = "<group>"; };
+		27CFC886190B5B2200195065 /* NOValidatingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOValidatingTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +124,11 @@
 				27CFC85E190B59DD00195065 /* Main.storyboard */,
 				27CFC861190B59DD00195065 /* NOViewController.h */,
 				27CFC862190B59DD00195065 /* NOViewController.m */,
+				27CFC881190B5A3000195065 /* NOTextValidator.h */,
+				27CFC882190B5A3000195065 /* NOTextValidator.m */,
+				27CFC884190B5A4500195065 /* NOTextValidatorDelegate.h */,
+				27CFC885190B5B2200195065 /* NOValidatingTextField.h */,
+				27CFC886190B5B2200195065 /* NOValidatingTextField.m */,
 				27CFC864190B59DD00195065 /* Images.xcassets */,
 				27CFC853190B59DD00195065 /* Supporting Files */,
 			);
@@ -250,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CFC887190B5B2200195065 /* NOValidatingTextField.m in Sources */,
+				27CFC883190B5A3000195065 /* NOTextValidator.m in Sources */,
 				27CFC863190B59DD00195065 /* NOViewController.m in Sources */,
 				27CFC859190B59DD00195065 /* main.m in Sources */,
 				27CFC85D190B59DD00195065 /* NOAppDelegate.m in Sources */,

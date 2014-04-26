@@ -8,22 +8,69 @@
 
 #import "NOViewController.h"
 
-@interface NOViewController ()
+#import "NOValidatingTextField.h"
+#import "NOTextValidator.h"
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Interface
+
+
+@interface NOViewController () <
+UITextFieldDelegate,
+NOTextValidatorDelegate
+>
+
+@property (weak, nonatomic) IBOutlet NOValidatingTextField *textFieldOne;
+
+@property (weak, nonatomic) IBOutlet NOValidatingTextField *textFieldTwo;
+
+@property (weak, nonatomic) IBOutlet NOValidatingTextField *textFieldThree;
 
 @end
 
+
+////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Implementation
+
+
 @implementation NOViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.textFieldOne.delegate = self;
+    self.textFieldTwo.delegate = self;
+    self.textFieldThree.delegate = self;
+    
+    [self setValidationRules];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)setValidationRules
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.textFieldOne.validator addValidationRule:NOTextFieldValidationRuleMaxCharacterCount value:24];
+    
+    [self.textFieldTwo.validator addValidationRule:NOTextFieldValidationRuleMaxWordCount value:3];
+    
+    [self.textFieldThree.validator addValidationRule:NOTextFieldValidationRuleMaxCharacterPerWordCount value:10];
 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Delegate - UITextField
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NOValidatingTextField *validatingTextField = (NOValidatingTextField *)textField;
+    NSString *potentialString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    
+    return [validatingTextField.validator validateForText:potentialString];
+}
+
 
 @end
