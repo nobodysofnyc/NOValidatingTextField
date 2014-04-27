@@ -17,7 +17,8 @@
 #pragma mark - Interface
 
 
-@interface NOViewController () <
+@interface NOViewController ()
+<
 UITextFieldDelegate,
 NOTextValidatorDelegate
 >

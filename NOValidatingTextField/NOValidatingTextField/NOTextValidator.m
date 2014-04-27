@@ -74,24 +74,6 @@ static NSString *NOTextFieldValidationRuleEmailAddressKey = @"NOTextFieldValidat
     return self.valid;
 }
 
-- (NSInteger)maxCharacterCount
-{
-    if ([self.rules valueForKey:NOTextFieldValidatorMaxCharacterCountKey]) {
-        return [[self.rules valueForKey:NOTextFieldValidatorMaxCharacterCountKey] integerValue];
-    }
-    
-    return -1;
-}
-
-- (NSInteger)maxWordCount
-{
-    if ([self.rules valueForKey:NOTextFieldValidatorMaxWordCountKey]) {
-        return [[self.rules valueForKey:NOTextFieldValidatorMaxWordCountKey] integerValue];
-    }
-    
-    return -1;
-}
-
 - (NSArray *)words
 {
     if (self.text.length == 0) {
