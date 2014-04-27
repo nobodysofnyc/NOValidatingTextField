@@ -19,7 +19,7 @@ Instances of NOTextValidator can also be used on their own.
 
 ```
 
-NSString *thisisanunnecessarilylongstring;
+NSString *string = @"thisisanunnecessarilylongstring";
 
 NOTextValidator *validator = [[NoTextValidator alloc] init];
 BOOL isValid = [validator addValidationRule:NOTextFieldValidationRuleMaxCharacterCount value:10]; 
